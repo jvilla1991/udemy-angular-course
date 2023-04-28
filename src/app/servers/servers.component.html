@@ -1,6 +1,25 @@
 
-<button class="btn btn-primary" [disabled]="!allowNewServer">Add Server</button>
+<label>Server Name</label>
+<!-- Example of Two Way Data Binding -->
+<input
+type="text"
+class="form-control"
+[(ngModel)]="serverName">
+
+<!-- Example of Passing and Using Data with Event Binding -->
+<input type="text" class="form-control"
+(input)="onUpdateServerName($event)">
+<p>{{ serverName }}</p>
+
+<!-- Example of Event Binding -->
+<button class="btn btn-primary" (click)="onCreateServer()" [disabled]="!allowNewServer">Add Server</button>
+
+<!-- Example of String Interpolation -->
 <p>{{ allowNewServer }}</p>
+
+<!-- Example of Property Binding -->
 <p [innerText]="allowNewServer"></p>
+<p>{{ serverCreationStatus }}</p>
+
 <app-server></app-server>
 <app-server></app-server>

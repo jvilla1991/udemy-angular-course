@@ -1,0 +1,8 @@
+<input
+type="text"
+class="form-control"
+[(ngModel)]="userName"
+(input)="onUpdateUserName($event)">
+<p>{{ userName }}</p>
+<button class="btn btn-primary" (click)="clearUserName()" [disabled]="ifUserNameEmpty">Clear UserName</button>
+
