@@ -8,6 +8,7 @@ import { ServerComponent } from './server/server.component';
 import { ServersComponent } from './servers/servers.component';
 import { SuccessAlertComponent } from './success-alert/success-alert.component'; // The Extension is added by webpack that bundles our project automatically.
 import { WarningAlertComponent } from './warning-alert/warning-alert.component';
+import { ThirdAssignmentComponent } from './third-assignment/third-assignment.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { WarningAlertComponent } from './warning-alert/warning-alert.component';
     ServersComponent,
     SuccessAlertComponent,
     WarningAlertComponent,
-    SecondAssignmentComponent
+    SecondAssignmentComponent,
+    ThirdAssignmentComponent
   ],
   imports: [
     BrowserModule,

@@ -18,8 +18,11 @@ class="form-control"
 <p>{{ allowNewServer }}</p>
 
 <!-- Example of Property Binding -->
-<p [innerText]="allowNewServer"></p>
-<p>{{ serverCreationStatus }}</p>
+<!-- <p [innerText]="allowNewServer"></p>
+<p>{{ serverCreationStatus }}</p> -->
 
-<app-server></app-server>
-<app-server></app-server>
+<!-- Example of Directives, using ngIf and ng IfElse -->
+<p *ngIf="serverCreated">Server was created. Name is: {{ serverName }}</p>
+
+
+<app-server *ngFor="let server of servers"></app-server>

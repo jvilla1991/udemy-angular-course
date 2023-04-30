@@ -1,1 +1,5 @@
-<p>{{ 'Server' }} with ID {{ serverId }} is {{ getServerStatus() }}</p>
+<p [ngStyle]="{backgroundColor: getColor()}"
+[ngClass]="{online: serverStatus === 'online'}">
+<!-- ^ This says that the HTML class of this is online IF serverStatus resolves to true.
+  Otherwise, this has no class associated with it -->
+{{ 'Server' }} with ID {{ serverId }} is {{ getServerStatus() }}</p>

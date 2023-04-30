@@ -1,0 +1,14 @@
+<button class="btn btn-primary" (click)="toggleDisplay()">Display Details</button>
+<div>
+  <p *ngIf="display">Here is a Paragraph</p>
+</div>
+<ng-container *ngFor="let log of buttonClickLog">
+  <div>
+    <p *ngIf="!isOverFourElements">{{ log }}</p>
+  </div>
+  <div>
+    <p *ngIf="isOverFourElements" [ngStyle]="{backgroundColor: getBackgroundColor()}"
+      [ngClass]="{output: isOverFourElements === true}">
+      {{ log }}</p>
+  </div>
+</ng-container>

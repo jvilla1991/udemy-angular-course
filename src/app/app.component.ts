@@ -12,4 +12,6 @@ import { Component } from '@angular/core';
 }) // Inline Styles also work just like doing template InLine
 export class AppComponent {
   name = 'my-first-app';
+  secondAssignment = false;
+  thirdAssignment = true;
 }
