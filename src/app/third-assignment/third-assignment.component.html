@@ -2,13 +2,13 @@
 <div>
   <p *ngIf="display">Here is a Paragraph</p>
 </div>
-<ng-container *ngFor="let log of buttonClickLog">
+<ng-container *ngFor="let log of buttonClickLog; let i = index">
   <div>
-    <p *ngIf="!isOverFourElements">{{ log }}</p>
+    <p *ngIf="i < 5">{{ log }}</p>
   </div>
   <div>
-    <p *ngIf="isOverFourElements" [ngStyle]="{backgroundColor: getBackgroundColor()}"
-      [ngClass]="{output: isOverFourElements === true}">
+    <p *ngIf="i >= 5" [ngStyle]="{backgroundColor: getBackgroundColor()}"
+      [ngClass]="{output: i >= 5}">
       {{ log }}</p>
   </div>
 </ng-container>

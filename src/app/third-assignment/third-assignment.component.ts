@@ -17,7 +17,7 @@ export class ThirdAssignmentComponent implements OnInit {
 
   toggleDisplay() {
     this.display = this.display === true ? false : true;
-    this.buttonClickLog.push('Button Pushed at ' + new Date().getTime());
+    this.buttonClickLog.push('Button Pushed at ' + new Date());
     if (this.buttonClickLog.length > 4) {
       this.isOverFourElements = true;
     }
